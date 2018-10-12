@@ -10,13 +10,13 @@ _HEADER_TEMPLATE = '{indent}* [{name}](#{anchor})'
 _START_TOC = '<!-- START_TOC -->'
 _END_TOC = '<!-- END_TOC -->'
 
-
+#def anchor
 def _anchor(name):
     anchor = name.lower().replace(' ', '-')
     anchor = re.sub(_PUNCTUATION_REGEX, '', anchor)
     return anchor
 
-
+#def _parse
 def _parse_header(header):
     r = re.match(_HEADER_REGEX, header)
     if r:
